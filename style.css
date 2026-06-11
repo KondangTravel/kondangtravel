@@ -1,0 +1,424 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f3f4f6;
+}
+
+/* HERO IMAGE FULL PAS */
+.hero {
+  width: 100%;
+  height: 360px;
+  background: url("pemandangan.jpg") center/cover no-repeat;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* 👈 naik ke atas */
+  padding-top: 40px;       /* 👈 lebih tinggi */
+}
+
+/* OVERLAY LEBIH NATURAL (tidak terlalu hitam) */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.25),
+    rgba(0,0,0,0.10)
+  );
+}
+
+/* TEXT HERO */
+.hero-text {
+  position: relative;
+  text-align: center;
+  color: white;
+  max-width: 900px;
+  padding: 0 20px;
+  transform: translateY(-10px); /* 👈 naikkan semua teks */
+}
+
+/* NAMA AGEN */
+.hero-text h1 {
+  font-size: 44px;
+  margin: 0;
+  font-weight: 900;
+  letter-spacing: 3px;
+}
+
+/* BOX SUB TITLE */
+.sub {
+  margin-top: 6px; /* lebih dekat */
+}
+
+/* JUDUL BESAR */
+.sub h2 {
+  font-size: 22px;
+  margin: 0;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+/* SUB TEXT KECIL */
+.sub p {
+  font-size: 12px;
+  margin-top: 4px;
+  letter-spacing: 1px;
+  opacity: 0.9;
+}
+
+/* KATEGORI */
+.kategori {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  padding: 20px;
+}
+
+.card {
+  background:#2563eb;
+  color:white;
+
+  padding:35px;
+  text-align:center;
+  border-radius:15px;
+  cursor:pointer;
+
+  font-size:22px;
+  font-weight:900;
+
+  box-shadow:0 8px 20px rgba(0,0,0,0.1);
+  transition:0.2s;
+}
+
+.card:hover {
+  transform:scale(1.05);
+  background:#1d4ed8;
+}
+}
+
+/* FORM */
+#formArea {
+  margin: 20px;
+  padding: 20px;
+  background: rgba(255,255,255,0.8);
+  border-radius: 15px;
+}
+/* LOGO */
+.logo {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+
+  width: 150px;
+height: 150px;
+
+  object-fit: contain;
+  z-index: 5;
+}
+/* ========================= */
+/* BOOKING PROFESIONAL */
+/* ========================= */
+
+.form-box{
+  background:#fff;
+  border-radius:20px;
+  padding:25px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+  max-width:900px;
+  margin:auto;
+}
+
+.form-title{
+  font-size:28px;
+  font-weight:800;
+  color:#2563eb;
+  margin-bottom:20px;
+}
+
+.form-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:15px;
+}
+
+.form-group{
+  display:flex;
+  flex-direction:column;
+}
+
+.form-group label{
+  margin-bottom:6px;
+  font-weight:600;
+  color:#374151;
+}
+
+.form-group input,
+.form-group select{
+  height:50px;
+  border:1px solid #d1d5db;
+  border-radius:12px;
+  padding:0 15px;
+  font-size:15px;
+}
+
+.form-group input:focus,
+.form-group select:focus{
+  outline:none;
+  border-color:#2563eb;
+}
+
+.btn-booking{
+  width:100%;
+  height:55px;
+  border:none;
+  border-radius:12px;
+  background:#2563eb;
+  color:#fff;
+  font-size:17px;
+  font-weight:700;
+  margin-top:20px;
+  cursor:pointer;
+}
+
+.btn-booking:hover{
+  background:#1d4ed8;
+}
+
+@media(max-width:768px){
+  .form-grid{
+    grid-template-columns:1fr;
+  }
+}
+/* ========================= */
+/* FOOTER */
+/* ========================= */
+
+.footer{
+  background:#1e293b;
+  color:white;
+  margin-top:40px;
+}
+
+.footer-content{
+  max-width:1200px;
+  margin:auto;
+  padding:40px 20px;
+  text-align:center;
+}
+
+.footer h3{
+  margin:0;
+  font-size:28px;
+  font-weight:800;
+  letter-spacing:2px;
+}
+
+.footer-desc{
+  margin-top:10px;
+  color:#cbd5e1;
+  font-size:15px;
+}
+
+.footer-layanan{
+  margin-top:25px;
+}
+
+.footer-layanan p{
+  margin:8px 0;
+  color:#e2e8f0;
+}
+
+.footer-kontak{
+  margin-top:25px;
+  font-size:16px;
+}
+
+.footer-copy{
+  margin-top:30px;
+  padding-top:20px;
+
+  border-top:1px solid rgba(255,255,255,0.15);
+
+  color:#94a3b8;
+  font-size:14px;
+
+  text-align:center;
+
+  position:relative;
+  left:20px;
+}======================== */
+/* GOOGLE MAPS FOOTER */
+/* ========================= */
+
+.footer-map{
+  margin-top:30px;
+}
+
+.footer-map h4{
+  margin-bottom:15px;
+  font-size:18px;
+  font-weight:700;
+  color:white;
+}
+
+.footer-map iframe{
+  width:100%;
+  max-width:700px;
+  height:320px;
+
+  border:none;
+  border-radius:15px;
+
+  box-shadow:0 10px 25px rgba(0,0,0,0.25);
+}
+/* ========================= */
+/* FOOTER 2 KOLOM */
+/* ========================= */
+
+.footer-wrapper{
+  max-width:1200px;
+  margin:auto;
+  padding:40px 20px;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:50px;
+}
+
+.footer-left{
+  width:320px;
+  flex-shrink:0;
+}
+
+.footer-left iframe{
+  width:320px;
+  height:320px;
+
+  border:none;
+  border-radius:20px;
+
+  box-shadow:0 10px 25px rgba(0,0,0,0.25);
+}
+
+.footer-right{
+  flex:1;
+  text-align:left;
+}
+
+/* ========================= */
+/* MOBILE VERSION */
+/* ========================= */
+
+/* ========================= */
+/* MOBILE VERSION */
+/* ========================= */
+
+@media (max-width:768px){
+
+  .hero{
+    height:420px;
+    padding-top:20px;
+  }
+
+  .logo{
+    position:absolute;
+    width:90px;
+    height:90px;
+    top:15px;
+    left:50%;
+    transform:translateX(-50%);
+  }
+
+  .hero-text{
+    margin-top:110px;
+    transform:none;
+  }
+
+  .hero-text h1{
+    font-size:28px;
+  }
+
+  .sub h2{
+    font-size:16px;
+  }
+
+  .sub p{
+    font-size:10px;
+    padding:0 15px;
+  }
+
+  .kategori{
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+  }
+
+  .card{
+    font-size:18px;
+    padding:20px;
+  }
+
+  /* FOOTER HP */
+  .footer-wrapper{
+    flex-direction:column;
+    gap:25px;
+  }
+
+  .footer-map{
+    width:100%;
+  }
+
+  .footer-map iframe{
+    width:100%;
+    height:250px;
+  }
+
+  .footer-info{
+    width:100%;
+    text-align:center;
+  }
+
+}
+
+/* ========================= */
+/* FLOATING WHATSAPP PREMIUM */
+/* ========================= */
+
+.whatsapp-float{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+
+  background:#25D366;
+  color:white;
+
+  text-decoration:none;
+
+  padding:14px 18px;
+
+  border-radius:18px;
+
+  box-shadow:0 10px 25px rgba(0,0,0,0.25);
+
+  z-index:9999;
+
+  transition:0.3s;
+}
+
+.whatsapp-float:hover{
+  transform:translateY(-4px);
+}
+
+.wa-title{
+  font-size:15px;
+  font-weight:700;
+  line-height:1.2;
+}
+
+.wa-subtitle{
+  font-size:12px;
+  opacity:0.9;
+  margin-top:2px;
+}
