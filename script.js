@@ -101,6 +101,12 @@ function openForm(type) {
             <input id="tanggal" type="date" min="${minDate}">
           </div>
 
+          <div class="form-group">
+            <label>Jam Keberangkatan</label>
+            <input id="jam" type="time" step="60">
+          </div>
+
+          ${input("Jumlah Orang", "jumlah")}
           ${input("No. HP", "hp")}
         </div>
 
@@ -149,7 +155,13 @@ function kirimWA(type) {
   }
 
   if (type === "travel") {
-    pesan = `TRAVEL\nDari: ${get("dari")}\nTujuan: ${get("ke")}\nTanggal: ${get("tanggal")}\nNo HP: ${get("hp")}`;
+    pesan = `TRAVEL
+Dari: ${get("dari")}
+Tujuan: ${get("ke")}
+Tanggal: ${get("tanggal")}
+Jam: ${get("jam")}
+Jumlah Penumpang: ${get("jumlah")}
+No HP: ${get("hp")}`;
   }
 
   if (type === "paket") {
