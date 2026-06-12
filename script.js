@@ -147,7 +147,9 @@ function validate(ids){
 
   ids.forEach(id=>{
     clearError(id);
-    const val = document.getElementById(id)?.value;
+
+    const el = document.getElementById(id);
+    const val = el ? el.value : "";
 
     if(!val){
       setError(id,"Wajib diisi");
@@ -205,7 +207,9 @@ function kirimWA(type){
 }
 
 function get(id){
-  return document.getElementById(id)?.value || "";
+  const el = document.getElementById(id);
+  if(!el) return "";
+  return el.value || "";
 }
 
 function getToday(){
